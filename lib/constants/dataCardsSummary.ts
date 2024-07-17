@@ -11,7 +11,7 @@ export const dataCardsSummary = [
     {
         icon: Waypoints,
         total: "86.5%",
-        average: 80,
+        average: 35,
         title: "Total Revenue",
         tooltipText: "See all of the revenue",
     },
