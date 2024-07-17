@@ -5,7 +5,6 @@ import { dataCardsSummary } from "@/lib/constants/dataCardsSummary";
 export default function Home() {
   return (
     <div>
-      <UserButton />
       <h2 className="text-2xl mb-4">
         Business Flow
       </h2>
