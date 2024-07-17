@@ -1,11 +1,10 @@
+import { Logo } from "@/components/Logo";
 import React from "react";
 
 export default function LayoutAuth({ children }: { children: React.ReactNode }) {
     return (
         <div className="flex flex-col justify-center h-screen items-center">
-            <p>
-                Business Flow
-            </p>
+            <Logo />
             <h1 className="text-3xl my-2">
                 Welcome to Business Flow
             </h1>
