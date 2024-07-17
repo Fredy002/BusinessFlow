@@ -47,7 +47,7 @@ export function SidebarRoutes() {
                 </div>
 
                 <Separator />
-                <footer className="text-center p-3 mt-3">
+                <footer className="text-center p-3 xl:mt-0 mt-3 ">
                     Debeloped by{" "}
                     <a
                         href="https://github.com/fredy002"
