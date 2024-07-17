@@ -5,8 +5,7 @@ import {
     Settings,
     ShieldCheck,
     CircleHelpIcon,
-    Calendar,
-    icons
+    Calendar
 } from "lucide-react";
 
 export const GeneralSidebarData = [
