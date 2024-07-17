@@ -1,6 +1,6 @@
 import { UserButton } from "@clerk/nextjs";
 import { CardSummary } from "./components/CardSummary";
-import { dataCardsSummary } from "@/lib/constants/dataCardsSummary";
+import { dataCardsSummary } from "@/lib/constants/CardsSummary.data";
 
 export default function Home() {
   return (
