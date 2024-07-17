@@ -16,7 +16,7 @@ export function Navbar() {
         <nav className="flex items-center px-2 gap-x-4 md:px-6 justify-between w-full bg-background border-b h-20">
 
             {/* Mobile */}
-            <div className="block md:hidden">
+            <div className="block xl:hidden">
                 <Sheet>
                     <SheetTrigger className="flex items-center">
                         <Menu />
