@@ -9,6 +9,7 @@ import {
 import { UserButton } from "@clerk/nextjs"
 import { Menu, Search } from "lucide-react"
 import { SidebarRoutes } from "../SidebarRoutes"
+import { ToggleTheme } from "../ToggleTheme"
 
 export function Navbar() {
     return (
@@ -26,13 +27,14 @@ export function Navbar() {
                 </Sheet>
             </div>
 
+            {/* Desktop */ }
             <div className="relative w-[300px]">
                 <Input placeholder="Search" className="rounded-lg" />
                 <Search className="absolute top-2 right-2" strokeWidth={1} />
             </div>
 
             <div className="flex gap-x-2 items-center">
-                <p>Toogle Theme</p>
+                <ToggleTheme/>
                 <UserButton />
             </div>
         </div>
