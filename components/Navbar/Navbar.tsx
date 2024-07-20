@@ -27,14 +27,29 @@ export function Navbar() {
                 </Sheet>
             </div>
 
-            {/* Desktop */ }
+            {/* Desktop */}
             <div className="relative w-[300px]">
                 <Input placeholder="Search" className="rounded-lg" />
                 <Search className="absolute top-2 right-2" strokeWidth={1} />
             </div>
 
             <div className="flex gap-x-2 items-center">
-                <ToggleTheme/>
+                {/*
+                <DropdownMenu>
+                    <DropdownMenuTrigger className="flex items-center">
+                        <Globe className="w-5 h-5" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                        <DropdownMenuItem onSelect={() => changeLanguage('en')}>
+                            English
+                        </DropdownMenuItem>
+                        <DropdownMenuItem onSelect={() => changeLanguage('es')}>
+                            Español
+                        </DropdownMenuItem>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+                */}
+                <ToggleTheme />
                 <UserButton />
             </div>
         </nav>
