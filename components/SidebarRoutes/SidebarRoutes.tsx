@@ -1,19 +1,26 @@
 "use client";
 
-import { GeneralSidebarData, SupportSidebarData, ToolsSidebarData } from "@/lib/constants/SidebarRoutes.data";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { SidebarItem } from "../SidebarItem";
 import { Separator } from "../ui/separator";
 import { Button } from "../ui/button";
+import { getGeneralSidebarData, getToolsSidebarData, getSupportSidebarData } from "@/lib/constants/SidebarRoutes.data";
 
 export function SidebarRoutes() {
+    const { translations } = useLanguage();
+
+    const generalSidebarData = getGeneralSidebarData(translations.sidebarRoutes);
+    const toolsSidebarData = getToolsSidebarData(translations.sidebarRoutes);
+    const supportSidebarData = getSupportSidebarData(translations.sidebarRoutes);
+
     return (
         <div className="flex flex-col justify-between h-full">
             <div>
                 <div className="p-2 md:p-6">
                     <p>
-                        GENERAL
+                        {translations.sidebarRoutes["General"]}
                     </p>
-                    {GeneralSidebarData.map((item, index) => (
+                    {generalSidebarData.map((item, index) => (
                         <SidebarItem key={index.toString()} item={item} />
                     ))}
                 </div>
@@ -21,9 +28,9 @@ export function SidebarRoutes() {
                 <Separator />
                 <div className="p-2 md:p-6">
                     <p>
-                        TOOLS
+                        {translations.sidebarRoutes["Tools"]}
                     </p>
-                    {ToolsSidebarData.map((item, index) => (
+                    {toolsSidebarData.map((item, index) => (
                         <SidebarItem key={index.toString()} item={item} />
                     ))}
                 </div>
@@ -31,9 +38,9 @@ export function SidebarRoutes() {
                 <Separator />
                 <div className="p-2 md:p-6">
                     <p>
-                        TOOLS
+                        {translations.sidebarRoutes["Support"]}
                     </p>
-                    {SupportSidebarData.map((item, index) => (
+                    {supportSidebarData.map((item, index) => (
                         <SidebarItem key={index.toString()} item={item} />
                     ))}
                 </div>
@@ -48,7 +55,7 @@ export function SidebarRoutes() {
 
                 <Separator />
                 <footer className="text-center p-3 xl:mt-0 mt-3 ">
-                    Debeloped by{" "}
+                    Developed by{" "}
                     <a
                         href="https://github.com/fredy002"
                         target="_blank"
